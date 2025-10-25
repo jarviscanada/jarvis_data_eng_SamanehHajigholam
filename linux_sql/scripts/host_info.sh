@@ -20,9 +20,9 @@ lscpu_out=`lscpu`
 cpu_number=$(echo "$lscpu_out" | egrep "^CPU\(s\):" | awk '{print $2}' | xargs)
 cpu_architecture=$(echo "$lscpu_out" | egrep "^Architecture:" | awk '{print $2}' | xargs)
 cpu_model=$(echo "$lscpu_out" | egrep "^Model name:" | awk -F: '{print $2}' | xargs)
-cpu_mhz=$(echo "$lscpu_out" | grep "CPU MHz" | awk -F: '{print $2}' | xargs)
+cpu_mhz=$(grep "cpu MHz" /proc/cpuinfo | awk '{print $4}' | uniq | head -n1) # head -n1 ensures that even if uniq didn't filter something (or there were different frequencies), you still only take the first one.
 l2_cache=$(echo "$lscpu_out" | egrep "^L2 cache:" | awk '{print $3}' | sed 's/K//'| xargs)
-total_mem=$(vmstat --unit M | tail -n1 | awk '{print $4}' | xargs)
+total_mem=$(free | awk '/^Mem:/ {print $2}' | xargs)
 timestamp=$(date '+%Y-%m-%d %H:%M:%S')
 
 # Create insert statement
