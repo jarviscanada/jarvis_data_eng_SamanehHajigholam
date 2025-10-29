@@ -3,7 +3,6 @@
 ## Introduction
 The Linux Cluster Monitoring Agent is an automated solution for collecting and storing hardware specifications and resource usage data across multiple Linux servers. It collects real-time metrics, such as CPU and memory usage, and stores them in a centralized PostgreSQL database to support effective cluster monitoring. The Linux Cluster Administration (LCA) team can use this data to generate reports and manage server performance efficiently. The project leverages **Bash, Docker, PostgreSQL, cron, and Git** technologies for Linux system administration, scripting, and DevOps automation. The project's scalable design allows multiple nodes to report to a single database, providing real-time visibility into cluster performance through simple SQL queries, enabling data-driven analysis and informed decision-making.
 
----
 
 ## Quick Start
 
@@ -44,7 +43,7 @@ The system architecture consists of three Linux hosts: host1, host2, and host3, 
 
 This project includes several Bash scripts that automate the setup and monitoring process for the Linux Cluster Monitoring Agent.
 
-#### `psql_docker.sh`
+#### 1. `psql_docker.sh`
 
 Manages the lifecycle of the PostgreSQL container used to store monitoring data.
 
@@ -59,7 +58,7 @@ Manages the lifecycle of the PostgreSQL container used to store monitoring data.
 ./scripts/psql_docker.sh stop
 ```
 
-#### `host_info.sh`
+#### 2. `host_info.sh`
 
 Collects and stores static hardware information from a host machine, including CPU, memory, and disk details. Execute once per server.
 
@@ -67,7 +66,7 @@ Collects and stores static hardware information from a host machine, including C
 ./scripts/host_info.sh localhost 5432 host_agent [db_username] [db_password]
 ```
 
-#### `host_usage.sh`
+#### 3. `host_usage.sh`
 
 Gathers real-time CPU and memory usage metrics and inserts them into the PostgreSQL database. Designed to run periodically via cron.
 
@@ -75,7 +74,7 @@ Gathers real-time CPU and memory usage metrics and inserts them into the Postgre
 ./scripts/host_usage.sh localhost 5432 host_agent [db_username] [db_password]
 ```
 
-#### `crontab`
+#### 4. `crontab`
 
 Automates data collection by running `host_usage.sh` every minute.
 
@@ -83,7 +82,7 @@ Automates data collection by running `host_usage.sh` every minute.
 * * * * * bash /path/to/host_usage.sh localhost 5432 host_agent [db_username] [db_password] > /tmp/host_usage.log 2>&1
 ```
 
-**queries.sql**
+#### 5. `queries.sql`
 
 This file contains SQL queries for business/reporting use cases, so, the system administrators can optimize service performance.
 
@@ -98,9 +97,9 @@ It helps answer business questions such as:
 
 ## Database Modeling
 
-The project uses a PostgreSQL database named **host_agent** to store both static hardware information and dynamic usage metrics collected from each Linux host. Each entry in `host_usage` is related to a single host in `host_info`. This one-to-many relationship allows a host to have multiple usage records over time.
+The project uses a PostgreSQL database named **host_agent** to store both static hardware information in the host_info table and dynamic usage data collected from each Linux host in the `host_usage` table. Each record in `host_usage` references a single host in `host_info`, forming a one-to-many relationship where one host can have multiple usage records over time.
 
-**host_info**
+### 1. host_info
 
 Stores static hardware and system information for each node in the cluster. Each host is uniquely identified by its hostname.
 
@@ -116,7 +115,7 @@ Stores static hardware and system information for each node in the cluster. Each
 | timestamp        | TIMESTAMP | Time when the host information was recorded    |
 | total_mem        | INT4      | Total memory available on the host (in MB)     |
 
-**host_usage**
+### 2. host_usage
 
 Stores real-time system usage metrics collected periodically from each host. It is linked to `host_info` through a foreign key.
 
@@ -134,7 +133,7 @@ Stores real-time system usage metrics collected periodically from each host. It 
 
 To ensure the Linux Cluster Monitoring Agent functions correctly, each component of the system was tested individually.
 
-**Bash Scripts Testing:**
+### Bash Scripts Testing:
 
 - **psql_docker.sh:** Verified Docker container creation, start, and stop. Confirmed accessibility via `psql`.
 
@@ -155,7 +154,7 @@ psql -h localhost -U postgres -d host_agent -c "SELECT * FROM host_info;"
 psql -h localhost -U postgres -d host_agent -c "SELECT * FROM host_usage;"
  ```
 
-**Database Testing:**
+### Database Testing:
 
 - Verified table creation via `ddl.sql` and schema inspection, using `\dt` command in psql.
 
