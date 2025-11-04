@@ -1,5 +1,30 @@
 # Introduction
 
+This project is created to simulate a real-world SQL development environment and strengthen practical database skills using **PostgreSQL**. It focuses on designing, defining, and manipulating relational data through hands-on exercises that cover essential SQL topics.
+
+A **PostgreSQL server** is set up in a **Docker container**, and **pgAdmin** is used to connect and manage the database visually. The environment is initialized using the `clubdata.sql` file, which defines the database structure and loads realistic sample data for a club membership system.
+Executing this file creates a new database (`exercises`), sets up the `cd` schema, and populates it with the following tables:
+
+- **members**: stores information about members and their relationships
+
+- **facilities**: contains available facilities and related costs
+
+- **bookings**: records facility reservations made by members
+
+The project demonstrates end-to-end SQL concepts, including:
+
+- **Data modeling** and defining relationships using **DDL** statements (CREATE, ALTER, etc.)
+
+- **Data manipulation** with **DML** statements (INSERT, UPDATE, DELETE)
+
+- **CRUD operations, JOINs, aggregations, string functions, subqueries**, and **window functions**
+
+- Applying **primary/foreign key constraints**
+
+- Exploring **query optimization** techniques such as **indexing (B-tree indexes)** for performance improvement
+
+Each question documented along with its corresponding SQL solution for clarity and future reference.
+
 # SQL Queries
 
 ###### Table Setup (DDL)
