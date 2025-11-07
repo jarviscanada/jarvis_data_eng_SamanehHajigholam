@@ -213,7 +213,7 @@ GROUP BY recommendedby
 ORDER BY recommendedby;
 ```
 
-###### Question 18: Produce a count of the number of recommendations each member has made. Order by member ID.
+###### Question 18: Produce a list of the total number of slots booked per facility. For now, just produce an output table consisting of facility id and slots, sorted by facility id.
 
 ```sql
 SELECT facid, SUM(slots) AS "Total Slots"
