@@ -32,7 +32,7 @@ skills:
     - Machine Learning
     - React Native
     - Docker
-    - Data Warehousing (Snowflake, Redshift concepts)
+    - Data Warehousing
 
 # List of Jarvis projects
 jarvis_projects:
@@ -86,7 +86,7 @@ highlighted_projects:
 #The description must be more than 25 words. If your experience is not software related, please focus on soft skills and achievements (e.g. team collaboration, problem-solving, improvements, communication).
 professional_experience:
   #Write your Jarvis role as a professional experience rather than training.
-  - title: "Software Developer"
+  - title: "Data Engineer"
     company: "Jarvis"
     duration: "2025-present"
     # The project description must start with an action verb (https://bit.ly/3guO98u)

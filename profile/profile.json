@@ -68,7 +68,7 @@
       "company": "Jarvis",
       "description": "Worked in Scrum teams to deliver backend and data-focused projects, gaining practical experience with Linux/Shell, SQL, Git, and Docker.",
       "duration": "2025-present",
-      "title": "Software Developer"
+      "title": "Data Engineer"
     },
     {
       "company": "Inlearna(Startup)",
@@ -103,7 +103,7 @@
       "Machine Learning",
       "React Native",
       "Docker",
-      "Data Warehousing (Snowflake, Redshift concepts)"
+      "Data Warehousing"
     ],
     "proficient": [
       "Python (Pandas, NumPy, Matplotlib)",

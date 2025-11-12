@@ -8,7 +8,7 @@ I'm a data analyst with a technical foundation in databases, Python, and cloud-b
 
 **Competent:** ETL Processes & Data Pipelines, Cloud Platforms (AWS, Azure), RESTful APIs, C/C++, Java, MERN Stack (React.js, Node.js, MongoDB)
 
-**Familiar:** PySpark, Machine Learning, React Native, Docker, Data Warehousing (Snowflake, Redshift concepts)
+**Familiar:** PySpark, Machine Learning, React Native, Docker, Data Warehousing
 
 ## Jarvis Projects
 
@@ -28,7 +28,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_SamanehHaj
 
 ## Professional Experiences
 
-**Software Developer, Jarvis (2025-present)**: Worked in Scrum teams to deliver backend and data-focused projects, gaining practical experience with Linux/Shell, SQL, Git, and Docker.
+**Data Engineer, Jarvis (2025-present)**: Worked in Scrum teams to deliver backend and data-focused projects, gaining practical experience with Linux/Shell, SQL, Git, and Docker.
 
 **Full-Stack Developer, Inlearna(Startup) (Nov 2024-Jan 2025)**: Developed a learning platform using Node.js, Express.js, MongoDB, and React.js. Designed and implemented RESTful APIs for efficient data management, ensuring seamless communication between front-end and back-end systems. Built and optimized database schemas and queries in MongoDB, improving data retrieval speed and reliability for the platform.
 
