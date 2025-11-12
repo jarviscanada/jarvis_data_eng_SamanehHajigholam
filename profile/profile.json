@@ -1,0 +1,118 @@
+{
+  "education": [
+    {
+      "awards_achievements": [
+        "Dean's Honour List",
+        "GPA: 4.0/4.0"
+      ],
+      "degree": "Advanced Diploma",
+      "department": "Computer Programming \u0026 Analysis",
+      "duration": "2022-2024",
+      "school_name": "Seneca College"
+    },
+    {
+      "awards_achievements": [
+        "GPA: 3.86/4.0",
+        "Transferred out"
+      ],
+      "degree": "Bachelor of Science",
+      "department": "Computer Science (Transferred Program)",
+      "duration": "2021-2022",
+      "school_name": "Concordia University"
+    },
+    {
+      "awards_achievements": null,
+      "degree": "Bachelor of Science",
+      "department": "Health",
+      "duration": "4 years",
+      "school_name": "University of Tehran"
+    }
+  ],
+  "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_SamanehHajigholam",
+  "highlighted_projects": [
+    {
+      "description": "Built and optimized stored procedures, triggers, and reporting views across multiple relational tables (Players, Teams, Rosters). Demonstrated proficiency in SQL logic, data relationships, and analytical reporting automation.",
+      "git_url": "https://github.com/shajigholam/PL-SQL-Football-Leagues",
+      "name": "PL/SQL Data Management System"
+    },
+    {
+      "description": "Built an e-commerce web app using ASP.NET Core MVC, SQL Server, and Azure deployment.  It allows administrators to manage orders, users, and products efficiently.",
+      "git_url": "https://github.com/shajigholam/Bulky",
+      "name": "Full-Stack E-Commerce Website"
+    }
+  ],
+  "jarvis_projects": [
+    {
+      "description": "Developed a scalable Linux-cluster monitoring system using Bash scripts and cron jobs to log CPU, memory, and disk metrics into a PostgreSQL database running in Docker.",
+      "git_url": "/linux_sql",
+      "name": "Cluster Monitor"
+    },
+    {
+      "description": "Implemented data modeling and SQL queries (joins, aggregation, filtering, string operations) using a Dockerized PostgreSQL instance. Reinforced analytical concepts through hands-on practice in relational database design and performance optimization.",
+      "git_url": "/sql",
+      "name": "SQL Analytics"
+    }
+  ],
+  "name": "Samaneh Hajigholam",
+  "others": [
+    {
+      "bullets": [
+        "IBM Data Analyst Professional Certificate(Jun 2025 - Sep 2025)",
+        "Microsoft Azure AI Fundamentals(Jul 2025)"
+      ],
+      "title": "Certificates"
+    }
+  ],
+  "professional_experience": [
+    {
+      "company": "Jarvis",
+      "description": "Worked in Scrum teams to deliver backend and data-focused projects, gaining practical experience with Linux/Shell, SQL, Git, and Docker.",
+      "duration": "2025-present",
+      "title": "Software Developer"
+    },
+    {
+      "company": "Inlearna(Startup)",
+      "description": "Developed a learning platform using Node.js, Express.js, MongoDB, and React.js. Designed and implemented RESTful APIs for efficient data management, ensuring seamless communication between front-end and back-end systems. Built and optimized database schemas and queries in MongoDB, improving data retrieval speed and reliability for the platform.",
+      "duration": "Nov 2024-Jan 2025",
+      "title": "Full-Stack Developer"
+    },
+    {
+      "company": "McMaster University(iGem Group)",
+      "description": "Built a responsive website using React.js, TypeScript, and Tailwind CSS for an international research competition. Collaborated remotely with researchers and developers to deliver a functional, visually clear, and scalable academic web solution.",
+      "duration": "Jun 2024-Oct 2024",
+      "title": "Frontend Developer"
+    },
+    {
+      "company": "Rajaei Heart and Research Center",
+      "description": "Collected, cleaned, and transformed clinical and research datasets to ensure data integrity and accuracy for analysis. Developed SQL queries and Python scripts to extract, manipulate, and analyze large datasets. Created visualizations and reports to communicate insights on patient outcomes and research findings.",
+      "duration": "Sep 2019-Apr 2020",
+      "title": "Research Analyst"
+    }
+  ],
+  "skills": {
+    "competent": [
+      "ETL Processes \u0026 Data Pipelines",
+      "Cloud Platforms (AWS, Azure)",
+      "RESTful APIs",
+      "C/C++",
+      "Java",
+      "MERN Stack (React.js, Node.js, MongoDB)"
+    ],
+    "familiar": [
+      "PySpark",
+      "Machine Learning",
+      "React Native",
+      "Docker",
+      "Data Warehousing (Snowflake, Redshift concepts)"
+    ],
+    "proficient": [
+      "Python (Pandas, NumPy, Matplotlib)",
+      "RDBMS/SQL",
+      "Linux/Bash",
+      "Git",
+      "Power BI \u0026 Data Visualization",
+      "Agile/Scrum"
+    ]
+  },
+  "summary": "I'm a data analyst with a technical foundation in databases, Python, and cloud-based data systems. My background combines practical experience analyzing healthcare data with hands-on work in data analytics and visualization. I also bring applied software development experience, providing a solid understanding of data engineering concepts such as ETL pipelines, RESTful APIs, and containerized environments. I'm passionate about transforming data into insight and building scalable, data-driven solutions that improve decision-making and deliver real-world impact."
+}
