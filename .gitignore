@@ -7,3 +7,8 @@ target/
 *.iml
 .idea/
 .eclipse
+# Ignore Jupyter / Docker / local environment files
+.jupyter/
+.config/
+.local/
+.npm/
