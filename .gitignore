@@ -12,3 +12,6 @@ target/
 .config/
 .local/
 .npm/
+.cache/
+.ipython/
+.ipynb_checkpoints/
