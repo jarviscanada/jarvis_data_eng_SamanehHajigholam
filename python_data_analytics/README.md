@@ -22,10 +22,10 @@ This project follows an analytical architecture suitable for a proof of concept.
 
 6. Analytical insights are delivered to the LGS marketing team via notebooks and GitHub.
 
-![Architecture Diagram](./data/LGS-project-architect-diagram.png)
+![Architecture Diagram](./python_data_wrangling/data/LGS-project-architect-diagram.png)
 
 ## Data Analytics and Wrangling
-You can check the data analytics code here: [Jupyter Notebook](./retail_data_analytics_wrangling.ipynb)
+You can check the data analytics code here: [Jupyter Notebook](./python_data_wrangling/retail_data_analytics_wrangling.ipynb)
 
 The dataset contains transactional records including invoice numbers, product details, quantities, prices, customer IDs, and countries. During data wrangling and analysis, the following
 steps were performed:
