@@ -5,7 +5,7 @@ github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_SamanehHaj
 
 # Introduce yourself, your academic and professional background.
 # What excites you about the software industry and your passion. At least 80 words
-summary: I'm a data analyst with a technical foundation in databases, Python, and cloud-based data systems. My background combines practical experience analyzing healthcare data with hands-on work in data analytics and visualization. I also bring applied software development experience, providing a solid understanding of data engineering concepts such as ETL pipelines, RESTful APIs, and containerized environments. I'm passionate about transforming data into insight and building scalable, data-driven solutions that improve decision-making and deliver real-world impact.
+summary: I'm a software developer with a technical foundation in databases, Python, and cloud-based data systems. My background combines practical experience analyzing healthcare data with hands-on work in data analytics and visualization. I also bring applied software development experience, providing a solid understanding of data engineering concepts such as ETL pipelines, RESTful APIs, and containerized environments. I'm passionate about transforming data into insight and building scalable, data-driven solutions that improve decision-making and deliver real-world impact.
 
 # Group your skills by level.
 # Your skills can be anything software related (e.g. language, frameworks, methodologies, software, etc.).
@@ -16,7 +16,6 @@ skills:
     - RDBMS/SQL
     - Linux/Bash
     - Git
-    - Power BI & Data Visualization
     - Agile/Scrum
   # At least 5 skills
   competent:
@@ -29,10 +28,10 @@ skills:
   # At least 5 skills
   familiar:
     - PySpark
-    - Machine Learning
+    - C#
     - React Native
     - Docker
-    - Data Warehousing
+    - Machine Learning
 
 # List of Jarvis projects
 jarvis_projects:
@@ -40,24 +39,24 @@ jarvis_projects:
     git_url: "/linux_sql"
     # The project description allows hiring managers to understand your project and technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: Developed a scalable Linux-cluster monitoring system using Bash scripts and cron jobs to log CPU, memory, and disk metrics into a PostgreSQL database running in Docker.
+    description: "Developed a Linux-based cluster monitoring system to collect and analyze CPU, memory, and disk usage across multiple servers running Rocky Linux 9. Implemented automated metric collection using Bash scripts and cron jobs, storing time-series data in a Dockerized PostgreSQL database for consistency and portability. The solution centralized system performance data and enabled efficient tracking of resource usage across nodes."
   - name: "SQL Analytics"
     git_url: "/sql"
     # The project description allows hiring managers to understand your project and technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
     # The project description must start with an action verb (https://bit.ly/3guO98u)
     description: Implemented data modeling and SQL queries (joins, aggregation, filtering, string operations) using a Dockerized PostgreSQL instance. Reinforced analytical concepts through hands-on practice in relational database design and performance optimization.
-#  - name: "Core Java Apps"
-#    git_url: "/core_java"
-#    description:
-#      - "Twitter App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
+  - name: "Core Java Apps"
+    git_url: "/core_java"
+    description: "Grep App: Built a Java-based CLI application similar to Linux grep that recursively searches directories using regex patterns and outputs matching lines. Applied object-oriented design, file I/O with buffered readers, and logging via SLF4J/Log4j. Packaged the app as a Fat JAR with Maven and containerized it using Docker for consistent deployment."
+#        - "Twitter App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
 #      - "JDBC App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
-#      - "Grep App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
+
 #  - name: "Springboot App"
 #    git_url: "/springboot"
 #    description: ""
-#  - name: "Python Data Analytics"
-#    git_url: "/python_data_anlytics"
-#    description: ""
+  - name: "Python Data Analytics"
+    git_url: "/python_data_anlytics"
+    description: "Analyzed two years of real-world retail transaction data to uncover customer purchasing patterns and support data-driven marketing strategies. Built a reproducible analytics workflow using Dockerized PostgreSQL and Jupyter Notebook, and performed data cleaning, validation, and feature engineering with Python, Pandas, and NumPy. Implemented customer-level metrics and RFM segmentation while handling production data challenges such as cancellations, missing values, and duplicated frequency distributions. Delivered actionable insights to identify high-value and at-risk customers, enabling targeted promotions and retention strategies."
 #  - name: "Hadoop"
 #    git_url: "/hadoop"
 #    description: ""
@@ -89,8 +88,8 @@ professional_experience:
   - title: "Data Engineer"
     company: "Jarvis"
     duration: "2025-present"
-    # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "Worked in Scrum teams to deliver backend and data-focused projects, gaining practical experience with Linux/Shell, SQL, Git, and Docker."
+    # The project description must start with an action verb (https://bit.ly/3guO98u) ("Worked in Scrum teams to deliver backend and data-focused projects, gaining practical experience with Linux/Shell, SQL, Git, and Docker.")
+    description: "Contributed to the design and development of data-driven software solutions within an Agile/Scrum environment, collaborating with engineers and technical leads to deliver backend and data-focused projects. Participated in sprint planning and daily stand-ups to support high-quality delivery. Worked hands-on with Python, SQL, and Java to build and maintain backend components, data processing workflows, and analytical data pipelines. Applied best practices in version control, testing, and code reviews using Git, Docker, Linux, and distributed data tools."
   - title: "Full-Stack Developer"
     company: "Inlearna(Startup)"
     duration: "Nov 2024-Jan 2025"
@@ -103,12 +102,12 @@ professional_experience:
   - title: "Research Analyst"
     company: "Rajaei Heart and Research Center"
     duration: "Sep 2019-Apr 2020"
-    description: "Collected, cleaned, and transformed clinical and research datasets to ensure data integrity and accuracy for analysis. Developed SQL queries and Python scripts to extract, manipulate, and analyze large datasets. Created visualizations and reports to communicate insights on patient outcomes and research findings."
+    description: "Collected, cleaned, and transformed clinical and research datasets to ensure data accuracy and consistency. Wrote SQL queries to extract and aggregate data from relational databases and used Python (Pandas, NumPy) for data preprocessing, validation, and exploratory analysis. Built repeatable data preparation workflows and produced visualizations and analytical reports to communicate insights on patient outcomes and research findings to clinical and research stakeholders. Maintained data quality standards and ensured proper handling of sensitive healthcare data."
 #List of edcuation
-education: 
+education:
   - school_name: "Seneca College"
     duration: "2022-2024"
-    degree: "Advanced Diploma"
+    degree: "Diploma"
     department: "Computer Programming & Analysis"
     # optional
     awards_achievements:
@@ -123,7 +122,7 @@ education:
       - "Transferred out"
 
   # remove?
-  - school_name: "University of Tehran"
+  - school_name: "Tehran University"
     duration: "4 years"
     degree: "Bachelor of Science"
     department: "Health"
