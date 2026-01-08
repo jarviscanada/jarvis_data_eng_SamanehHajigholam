@@ -7,6 +7,7 @@ target/
 *.iml
 .idea/
 .eclipse
+*.log
 
 # Python
 __pycache__/
@@ -18,12 +19,7 @@ venv/
 airflow/logs/
 
 # Data outputs
-data/bronze/companies
-data/bronze/prices
-data/silver/prices
-data/silver/prices
-data/gold/analytics
-data/gold/prices_enriched
-data/raw/company_info_and_logos
-data/raw/us_stocks_etfs
-
+data/bronze/**/*
+data/silver/**/*
+data/gold/**/*
+data/raw/**/* 
