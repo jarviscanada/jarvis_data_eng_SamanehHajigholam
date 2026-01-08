@@ -19,7 +19,11 @@ venv/
 airflow/logs/
 
 # Data outputs
-data/bronze/**/*
-data/silver/**/*
-data/gold/**/*
-data/raw/**/* 
+equity-analytics-pipeline/data/bronze/companies/*
+equity-analytics-pipeline/data/bronze/prices/*
+equity-analytics-pipeline/data/silver/companies/*
+equity-analytics-pipeline/data/silver/prices/*
+equity-analytics-pipeline/data/gold/analytics/*
+equity-analytics-pipeline/data/gold/prices_enriched/*
+equity-analytics-pipeline/data/raw/company_info_and_logos/*
+equity-analytics-pipeline/data/raw/us_stocks_etfs/*
