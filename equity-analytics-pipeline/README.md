@@ -4,7 +4,7 @@
 
 This project implements a **production-style batch data engineering pipeline** for equity market data using a **Medallion Architecture (Bronze → Silver → Gold)**. It is designed to demonstrate real-world data engineering skills including ingestion, transformation, data quality enforcement, orchestration, testing, and operational best practices.
 
-The pipeline ingests raw equity price data and company metadata, cleans and standardizes it, enriches it with analytical features, and produces curated datasets suitable for downstream analytics and reporting.
+The pipeline ingests raw equity price data and company metadata, cleans and standardizes it, enriches it with analytical features, and produces curated datasets suitable for downstream analytics and reporting. [Project presentation](https://drive.google.com/file/d/1mpePvMHyNW7Vs8g4TxTDmwinYkXp_Hih/view?usp=drive_link)
 
 ## Key Features
 - Columnar storage with Parquet
