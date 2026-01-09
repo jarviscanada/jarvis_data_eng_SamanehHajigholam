@@ -7,3 +7,39 @@ target/
 *.iml
 .idea/
 .eclipse
+*.log
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.pytest_cache/
+
+# Airflow
+airflow/logs/
+
+# Data outputs
+equity-analytics-pipeline/data/bronze/companies/*
+!equity-analytics-pipeline/data/bronze/companies/.gitkeep
+
+equity-analytics-pipeline/data/bronze/prices/*
+!equity-analytics-pipeline/data/bronze/prices/.gitkeep
+
+equity-analytics-pipeline/data/silver/companies/*
+!equity-analytics-pipeline/data/silver/companies/.gitkeep
+
+equity-analytics-pipeline/data/silver/prices/*
+!equity-analytics-pipeline/data/silver/prices/.gitkeep
+
+equity-analytics-pipeline/data/gold/analytics/*
+!equity-analytics-pipeline/data/gold/analytics/.gitkeep
+
+equity-analytics-pipeline/data/gold/prices_enriched/*
+!equity-analytics-pipeline/data/gold/prices_enriched/.gitkeep
+
+equity-analytics-pipeline/data/raw/company_info_and_logos/*
+!equity-analytics-pipeline/data/raw/company_info_and_logos/.gitkeep
+
+equity-analytics-pipeline/data/raw/us_stocks_etfs/*
+!equity-analytics-pipeline/data/raw/us_stocks_etfs/.gitkeep
+
