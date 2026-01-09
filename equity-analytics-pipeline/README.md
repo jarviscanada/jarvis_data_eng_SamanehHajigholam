@@ -15,8 +15,6 @@ The pipeline ingests raw equity price data and company metadata, cleans and stan
 ## Use Case
 Analytics-ready datasets for equity selection, sector analysis, and risk metrics.
 
----
-
 ## Architecture
 
 ### Medallion Layers
@@ -27,16 +25,12 @@ Raw Data → Bronze → Silver → Gold
 
 ![Architecture Diagram](./scripts/architect-pipeline.png)
 
----
-
 ## Data Sources
 
 - **Equity Prices**: Daily stock price data (CSV)
 - **Company Metadata**: Company name, sector, industry, exchange, market cap
 
 These datasets are treated as **immutable inputs** and are never modified directly.
-
----
 
 ## Configuration
 
@@ -49,8 +43,6 @@ This design ensures:
 - No hardcoded paths
 - Easy future containerization
 
----
-
 ## Spark Processing
 
 - PySpark used for all transformations
@@ -59,8 +51,6 @@ This design ensures:
 - Partitioning by `ticker` for price datasets
 
 Spark sessions are created centrally via `get_spark()` to ensure consistent configuration.
-
----
 
 ## Data Quality Framework
 
@@ -86,8 +76,6 @@ class DataQualityError(Exception):
 ```
 
 Any violation raises a `DataQualityError`, causing the Airflow task to fail and retry. (instead of silent drops)
-
----
 
 ## Airflow Orchestration
 
@@ -118,11 +106,10 @@ Data Quality Checks
 | Backfill | Manual execution-date backfill |
 | Parallelism control | `max_active_runs=1` |
 
----
 
 ## Testing Strategy
 
-### 1️⃣ Unit Tests
+### 1. Unit Tests
 
 **Example:** `tests/unit/test_config.py`
 
@@ -131,7 +118,7 @@ Data Quality Checks
 
 ---
 
-### 2️⃣ Integration Tests
+### 2. Integration Tests
 
 **Silver Layer**
 
@@ -145,7 +132,7 @@ Data Quality Checks
 
 ---
 
-### 3️⃣ Data Quality Tests
+### 3. Data Quality Tests
 
 Located in:
 ```
@@ -160,7 +147,7 @@ tests/data_quality/test_dq_checks.py
 
 ## How to Run
 
-### 1️⃣ Create Virtual Environment
+### 1. Create Virtual Environment
 
 ```bash
 python -m venv venv
@@ -175,14 +162,14 @@ pip install "apache-airflow==${AIRFLOW_VERSION}" \
   --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-${AIRFLOW_VERSION}/constraints-${PYTHON_VERSION}.txt"
 ```
 
-### 2️⃣ Set Environment Variables
+### 2. Set Environment Variables
 
 ```bash
 export AIRFLOW_HOME=$(pwd)/airflow
 export PYTHONPATH=$(pwd)
 ```
 
-### 3️⃣ Run Airflow
+### 3. Run Airflow
 
 ```bash
 airflow db init
