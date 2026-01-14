@@ -57,6 +57,9 @@ jarvis_projects:
   - name: "Python Data Analytics"
     git_url: "/python_data_anlytics"
     description: "Analyzed two years of real-world retail transaction data to uncover customer purchasing patterns and support data-driven marketing strategies. Built a reproducible analytics workflow using Dockerized PostgreSQL and Jupyter Notebook, and performed data cleaning, validation, and feature engineering with Python, Pandas, and NumPy. Implemented customer-level metrics and RFM segmentation while handling production data challenges such as cancellations, missing values, and duplicated frequency distributions. Delivered actionable insights to identify high-value and at-risk customers, enabling targeted promotions and retention strategies."
+  - name: "Equity Analytics Data Pipeline"
+    git_url: "/equity-analytics-pipeline"
+    description: "Implemented an end-to-end batch data pipeline to ingest, validate, and analyze equity market data using Apache Spark and Apache Airflow. Built a medallion architecture with Spark transformations that enforce financial data quality rules. Orchestrated the workflow in Airflow with task dependencies, retries, failure callbacks, and data quality gates to prevent invalid data. Produced analytics-ready gold datasets for sector- and stock-level performance analysis, with automated validation and Pytest coverage to ensure the reliability and reproducibility of investment insights."
 #  - name: "Hadoop"
 #    git_url: "/hadoop"
 #    description: ""
@@ -76,6 +79,8 @@ highlighted_projects:
     git_url: "https://github.com/shajigholam/PL-SQL-Football-Leagues"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
     description: Built and optimized stored procedures, triggers, and reporting views across multiple relational tables (Players, Teams, Rosters). Demonstrated proficiency in SQL logic, data relationships, and analytical reporting automation.
+  - name: "Analysis of Student Hope and Future Plans"
+    description: Analyzed survey responses from 350 medical students to explore their hopes and expectations for their future careers, using Python (Pandas, NumPy) for data cleaning, transformation, and statistical analysis. Built an ETL workflow to extract raw survey files, handle missing values and duplicates, standardize categorical responses, and structure the data for analysis. Conducted correlation analysis to identify patterns in career aspirations, stress factors, and perceived challenges, revealing key trends such as the top three areas of concern affecting student optimism. Created interactive visualizations with Plotly and Seaborn to communicate findings to academic advisors.
   - name: "Full-Stack E-Commerce Website"
     git_url: "https://github.com/shajigholam/Bulky"
     description: Built an e-commerce web app using ASP.NET Core MVC, SQL Server, and Azure deployment.  It allows administrators to manage orders, users, and products efficiently.
