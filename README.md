@@ -8,7 +8,7 @@ I'm a software developer with a technical foundation in databases, Python, and c
 
 **Competent:** ETL Processes & Data Pipelines, Cloud Platforms (AWS, Azure), RESTful APIs, C/C++, Java, MERN Stack (React.js, Node.js, MongoDB)
 
-**Familiar:** PySpark, C#, React Native, Docker, Machine Learning
+**Familiar:** PySpark, C#, Postman, Docker, Power BI
 
 ## Jarvis Projects
 
@@ -24,6 +24,13 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_SamanehHaj
 **Python Data Analytics** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_SamanehHajigholam/tree/master/python_data_anlytics)]: Analyzed two years of real-world retail transaction data to uncover customer purchasing patterns and support data-driven marketing strategies. Built a reproducible analytics workflow using Dockerized PostgreSQL and Jupyter Notebook, and performed data cleaning, validation, and feature engineering with Python, Pandas, and NumPy. Implemented customer-level metrics and RFM segmentation while handling production data challenges such as cancellations, missing values, and duplicated frequency distributions. Delivered actionable insights to identify high-value and at-risk customers, enabling targeted promotions and retention strategies.
 
 **Equity Analytics Data Pipeline** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_SamanehHajigholam/tree/master/equity-analytics-pipeline)]: Implemented an end-to-end batch data pipeline to ingest, validate, and analyze equity market data using Apache Spark and Apache Airflow. Built a medallion architecture with Spark transformations that enforce financial data quality rules. Orchestrated the workflow in Airflow with task dependencies, retries, failure callbacks, and data quality gates to prevent invalid data. Produced analytics-ready gold datasets for sector- and stock-level performance analysis, with automated validation and Pytest coverage to ensure the reliability and reproducibility of investment insights.
+
+**Databricks Data Pipelines** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_SamanehHajigholam/tree/master/databricks)]:
+      
+  - Stock Market DLT Pipeline: Built a cloud-based data pipeline using Azure Databricks and Delta Live Tables to ingest and process stock market data from the Alpha Vantage API. Implemented a streaming Medallion architecture (Bronze, Silver, Gold) with PySpark to perform data validation, deduplication, and feature engineering, and orchestrated daily ingestion and transformation jobs. Delivered an interactive analytics dashboard to visualize stock performance metrics and company metadata, demonstrating end-to-end data engineering, workflow automation, and scalable data processing.
+  - Fraud Analytics ETL Pipeline: Built an end-to-end fraud analytics ELT pipeline on Azure Databricks using a Medallion Architecture. Ingested multi-source financial transaction data from Azure SQL Database and Azure Data Lake Storage using JDBC, Lakeflow Connect, and Azure Data Factory, then transformed and enriched the data with PySpark to create analytics-ready Delta tables. Implemented workflow orchestration with Databricks Jobs and developed a Databricks SQL dashboard to analyze fraud trends, financial losses, and high-risk users and merchants.
+
+**Power BI Dashboards** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_SamanehHajigholam/tree/master/power_bi)]: Developed interactive dashboards using Power BI and Power Query to analyze survey data, financial market data via API, and sales datasets. Built KPI cards, time-series charts, and advanced visuals (Key Influencers, Q&A) to provide insights into salary trends, stock performance, and product profitability.
 
 
 ## Highlighted Projects
@@ -58,5 +65,6 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_SamanehHaj
 
 
 ## Miscellaneous
+- Databricks Data Engineer Certificate(Feb 2026)
 - IBM Data Analyst Professional Certificate(Jun 2025 - Sep 2025)
 - Microsoft Azure AI Fundamentals(Jul 2025)
