@@ -70,12 +70,26 @@
       "description": "Implemented an end-to-end batch data pipeline to ingest, validate, and analyze equity market data using Apache Spark and Apache Airflow. Built a medallion architecture with Spark transformations that enforce financial data quality rules. Orchestrated the workflow in Airflow with task dependencies, retries, failure callbacks, and data quality gates to prevent invalid data. Produced analytics-ready gold datasets for sector- and stock-level performance analysis, with automated validation and Pytest coverage to ensure the reliability and reproducibility of investment insights.",
       "git_url": "/equity-analytics-pipeline",
       "name": "Equity Analytics Data Pipeline"
+    },
+    {
+      "description": [
+        "Stock Market DLT Pipeline: Built a cloud-based data pipeline using Azure Databricks and Delta Live Tables to ingest and process stock market data from the Alpha Vantage API. Implemented a streaming Medallion architecture (Bronze, Silver, Gold) with PySpark to perform data validation, deduplication, and feature engineering, and orchestrated daily ingestion and transformation jobs. Delivered an interactive analytics dashboard to visualize stock performance metrics and company metadata, demonstrating end-to-end data engineering, workflow automation, and scalable data processing.",
+        "Fraud Analytics ETL Pipeline: Built an end-to-end fraud analytics ELT pipeline on Azure Databricks using a Medallion Architecture. Ingested multi-source financial transaction data from Azure SQL Database and Azure Data Lake Storage using JDBC, Lakeflow Connect, and Azure Data Factory, then transformed and enriched the data with PySpark to create analytics-ready Delta tables. Implemented workflow orchestration with Databricks Jobs and developed a Databricks SQL dashboard to analyze fraud trends, financial losses, and high-risk users and merchants."
+      ],
+      "git_url": "/databricks",
+      "name": "Databricks Data Pipelines"
+    },
+    {
+      "description": "Developed interactive dashboards using Power BI and Power Query to analyze survey data, financial market data via API, and sales datasets. Built KPI cards, time-series charts, and advanced visuals (Key Influencers, Q\u0026A) to provide insights into salary trends, stock performance, and product profitability.",
+      "git_url": "/power_bi",
+      "name": "Power BI Dashboards"
     }
   ],
   "name": "Samaneh Hajigholam",
   "others": [
     {
       "bullets": [
+        "Databricks Data Engineer Certificate(Feb 2026)",
         "IBM Data Analyst Professional Certificate(Jun 2025 - Sep 2025)",
         "Microsoft Azure AI Fundamentals(Jul 2025)"
       ],
@@ -120,9 +134,9 @@
     "familiar": [
       "PySpark",
       "C#",
-      "React Native",
+      "Postman",
       "Docker",
-      "Machine Learning"
+      "Power BI"
     ],
     "proficient": [
       "Python (Pandas, NumPy, Matplotlib)",
