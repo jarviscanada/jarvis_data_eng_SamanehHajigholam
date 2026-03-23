@@ -10,13 +10,13 @@ The solution covers:
 
 - Workflow orchestration using Databricks Jobs
 
-- Analytical dashboard built in Databricks SQL(screenshot: `Fraud-Analytics-Dashboard.jpg`)
+- Analytical dashboard built in Databricks SQL(screenshot: `Fraud-Analytics-Dashboard.png`)
 
 The objective is to transform raw financial transaction data into a structured fraud analytics warehouse and create actionable fraud insights.
 
 ## Architecture
 
-![Architecture Diagram](./ELT-pipeline.png)
+![Architecture Diagram](./assets/ELT-pipeline.png)
 
 ## Data Ingestion
 
