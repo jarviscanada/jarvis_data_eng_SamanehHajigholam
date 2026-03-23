@@ -11,37 +11,36 @@ Daily stock market data is ingested from the Alpha Vantage API, transformed into
 
 ![Architecture Diagram](./DLT-pipeline.png)
 
-## Ingestion Layer
-`01_ingestion_alpha_vantage` notebook
-- Calls Alpha Vantage API(Handles API rate limits)
-- Converts JSON to Spark DataFrame
-<!--- Uses Delta MERGE for idempotent upserts(using `symbol + trading_date` as the key)-->
-- Creates raw tables: `raw_stock_data`, `raw_company_info`
-
 ## Bronze Layer
-- Streaming ingestion from raw tables
-- Stored streaming tables `bronze_stock_data` and `bronze_company_info` in Unity Catalog
+- API calls fetch: Daily stock data, Company metadata
+- Data is converted into Spark DataFrames and persisted in Materialized views.
+- Stored bronze tables `bronze_stock_data` and `bronze_company_info` in Unity Catalog
 
 ## Silver Layer
-- Streaming transformations
-- Data quality enforcement using DLT expectations
+- Streaming transformations of Bronze data
+- Data quality enforcement using DLT expectations: `valid_price` -> price > 0, `valid_volume` -> volume >= 0
 - Calculated metrics: `price_change` and `price_change_pct`
 - SCD Type 2 handling for company metadata
-<!--- SCD Type 1 handling for company metadata-->
-- Srores atreaming tables: `silver_stock_data` and `silver_company_info`
+- Stored as streaming tables: `silver_stock_data` and `silver_company_info`
 
 ## Gold Layer
 `gold_daily_stock_summary`
 - Joined stock + company data and created a materialized view
 - Daily metrics ready for reporting
-- Serves SQL interactive dashboard: `Stock Performance Dashboard.jpg`
+- Serves SQL interactive dashboard: `Stock-Analytics-Dashboard.jpg` with these charts:
+    - Stock Price Trend
+    - Daily Price Change %
+    - Average Volume by Stock
+    - Sector Distribution
+    - Top Gainers
 
 ## Orchestration
-A Databricks Job, scheduled daily to automate 3 tasks: Ingestion notebook -> DLT pipeline execution -> Dashboard refresh (screenshot: `Stock_Data_DLT_Pipeline_job.png`)
+A Databricks Job, scheduled daily to automate the full pipeline: DLT pipeline execution(bronze->silver->gold) -> Dashboard refresh (screenshot: `Stock_DLT_Pipeline.png`)
 
 ## Future Improvements
 - Implement **Auto Loader** for Scalable Ingestion: So, we can support Incremental file-based ingestion, schema evolution handling, large-scale historical backfills, and better production scalability
 - Optimize the Gold table by adding **Partitioning** by trading_date, applying **Z-ORDER** BY symbol, enabling Delta table optimization and vacuum. So we can improve dashboard query performance, long time range scans, and reduce costs
 - Enhance reliability by adding more **DLT expectations** (e.g., no missing dates per symbol), configuring pipeline **failure notifications**, and adding anomaly detection for extreme price changes
+- Adding parameters for tickers so the ticker list can be changed without modifying the code.
 
 
