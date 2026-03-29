@@ -5,7 +5,7 @@ github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_SamanehHaj
 
 # Introduce yourself, your academic and professional background.
 # What excites you about the software industry and your passion. At least 80 words
-summary: I'm a software developer with a technical foundation in databases, Python, and cloud-based data systems. My background combines practical experience analyzing healthcare data with hands-on work in data analytics and visualization. I also bring applied software development experience, providing a solid understanding of data engineering concepts such as ETL pipelines, RESTful APIs, and containerized environments. I'm passionate about transforming data into insight and building scalable, data-driven solutions that improve decision-making and deliver real-world impact.
+summary: I am a Databricks Certified Data Engineer with a technical foundation in databases, SQL, Python, and cloud-based data systems. My background combines practical experience analyzing data with hands-on work in data analytics and visualization. I also bring applied software development experience, providing a solid understanding of data engineering concepts such as ETL pipelines, RESTful APIs, and containerized environments. I'm passionate about transforming data into insight and building scalable, data-driven solutions that improve decision-making and deliver real-world impact.
 
 # Group your skills by level.
 # Your skills can be anything software related (e.g. language, frameworks, methodologies, software, etc.).
@@ -15,23 +15,24 @@ skills:
     - Python (Pandas, NumPy, Matplotlib)
     - RDBMS/SQL
     - Linux/Bash
+    - Java
+    - Apache Spark
     - Git
-    - Agile/Scrum
   # At least 5 skills
   competent:
-    - ETL Processes & Data Pipelines
+    - ETL/Data Pipelines
     - Cloud Platforms (AWS, Azure)
+    - Data Warehousing
+    - Agile/Scrum
     - RESTful APIs
-    - C/C++
-    - Java
-    - MERN Stack (React.js, Node.js, MongoDB)
+    - Apache Airflow
   # At least 5 skills
   familiar:
-    - PySpark
-    - C#
+    - C/C++
     - Postman
     - Docker
     - Power BI
+    - MERN Stack (React.js, Node.js, MongoDB)
 
 # List of Jarvis projects
 jarvis_projects:
