@@ -1,14 +1,14 @@
 # Samaneh Hajigholam . Jarvis Consulting
 
-I'm a software developer with a technical foundation in databases, Python, and cloud-based data systems. My background combines practical experience analyzing healthcare data with hands-on work in data analytics and visualization. I also bring applied software development experience, providing a solid understanding of data engineering concepts such as ETL pipelines, RESTful APIs, and containerized environments. I'm passionate about transforming data into insight and building scalable, data-driven solutions that improve decision-making and deliver real-world impact.
+I am a Databricks Certified Data Engineer with a technical foundation in databases, SQL, Python, and cloud-based data systems. My background combines practical experience analyzing data with hands-on work in data analytics and visualization. I also bring applied software development experience, providing a solid understanding of data engineering concepts such as ETL pipelines, RESTful APIs, and containerized environments. I'm passionate about transforming data into insight and building scalable, data-driven solutions that improve decision-making and deliver real-world impact.
 
 ## Skills
 
-**Proficient:** Python (Pandas, NumPy, Matplotlib), RDBMS/SQL, Linux/Bash, Git, Agile/Scrum
+**Proficient:** Python (Pandas, NumPy, Matplotlib), RDBMS/SQL, Linux/Bash, Java, Apache Spark, Git
 
-**Competent:** ETL Processes & Data Pipelines, Cloud Platforms (AWS, Azure), RESTful APIs, C/C++, Java, MERN Stack (React.js, Node.js, MongoDB)
+**Competent:** ETL/Data Pipelines, Cloud Platforms (AWS, Azure), Data Warehousing, Agile/Scrum, RESTful APIs, Apache Airflow
 
-**Familiar:** PySpark, C#, Postman, Docker, Power BI
+**Familiar:** C/C++, Postman, Docker, Power BI, MERN Stack (React.js, Node.js, MongoDB)
 
 ## Jarvis Projects
 
