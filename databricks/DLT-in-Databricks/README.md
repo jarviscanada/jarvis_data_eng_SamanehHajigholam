@@ -9,11 +9,11 @@ Daily stock market data is ingested from the Alpha Vantage API, transformed into
 
 - `transformations/transformation.py` → DLT pipeline code (bronze → silver → gold)
 
-![Architecture Diagram](./DLT-pipeline.png)
+![Architecture Diagram](./assets/DLT-pipeline.png)
 
 ## Bronze Layer
 - API calls fetch: Daily stock data, Company metadata
-- Data is converted into Spark DataFrames and persisted in Materialized views.
+- Data is converted into Spark DataFrames and persisted in Delta tables.
 - Stored bronze tables `bronze_stock_data` and `bronze_company_info` in Unity Catalog
 
 ## Silver Layer
@@ -38,7 +38,6 @@ Daily stock market data is ingested from the Alpha Vantage API, transformed into
 A Databricks Job, scheduled daily to automate the full pipeline: DLT pipeline execution(bronze->silver->gold) -> Dashboard refresh (screenshot: `Stock_DLT_Pipeline.png`)
 
 ## Future Improvements
-- Implement **Auto Loader** for Scalable Ingestion: So, we can support Incremental file-based ingestion, schema evolution handling, large-scale historical backfills, and better production scalability
 - Optimize the Gold table by adding **Partitioning** by trading_date, applying **Z-ORDER** BY symbol, enabling Delta table optimization and vacuum. So we can improve dashboard query performance, long time range scans, and reduce costs
 - Enhance reliability by adding more **DLT expectations** (e.g., no missing dates per symbol), configuring pipeline **failure notifications**, and adding anomaly detection for extreme price changes
 - Adding parameters for tickers so the ticker list can be changed without modifying the code.
