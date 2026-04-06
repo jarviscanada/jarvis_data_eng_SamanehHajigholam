@@ -1,0 +1,61 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: trading-db
+  labels:
+    app: trading-db
+spec:
+  ports:
+    - port: 5432
+  selector:
+    app: trading-db
+    tier: db
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: psql-pv-claim
+  labels:
+    app: trading-db
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trading-db
+  labels:
+    app: trading-db
+spec:
+  selector:
+    matchLabels:
+      app: trading-db
+      tier: db
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: trading-db
+        tier: db
+    spec:
+      containers:
+        - image: acrsamaneh.azurecr.io/trading-db:latest
+          name: trading-db
+          env:
+            - name: PGDATA
+              value: /var/lib/postgresql/data/pgdata
+          ports:
+            - containerPort: 5432
+              name: trading-db
+          volumeMounts:
+            - name: psql-persistent-storage
+              mountPath: /var/lib/postgresql/data
+      volumes:
+        - name: psql-persistent-storage
+          persistentVolumeClaim:
+            claimName: psql-pv-claim
