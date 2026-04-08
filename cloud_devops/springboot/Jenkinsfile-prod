@@ -1,0 +1,83 @@
+pipeline {
+  agent {
+    kubernetes {
+      yaml """
+      apiVersion: v1
+      kind: Pod
+      spec:
+        serviceAccountName: jenkins-agent
+        containers:
+        - name: jnlp
+          image: jenkins/inbound-agent:latest
+          args: ['\$(JENKINS_SECRET)', '\$(JENKINS_NAME)']
+        - name: azcli
+          image: mcr.microsoft.com/azure-cli
+          command: ['cat']
+          tty: true
+          volumeMounts:
+            - name: kube-config
+              mountPath: /home/jenkins/.kube
+        - name: kubectl
+          image: lachlanevenson/k8s-kubectl:latest
+          command: ['cat']
+          tty: true
+          volumeMounts:
+            - name: kube-config
+              mountPath: /home/jenkins/.kube
+        volumes:
+          - name: kube-config
+            emptyDir: {}
+      """
+    }
+  }
+  environment {
+    AZ_USER=credentials('AZ_USER_PROD')
+    AZ_PWD=credentials('AZ_PWD_PROD')
+    AZ_TENANT=credentials('AZ_TENANT_PROD')
+    ACR_NAME='acrsamaneh'
+    IMAGE_NAME="trading-app:${BUILD_NUMBER}"
+    RESOURCE_GROUP='rg-trading-app-aks-westus2'
+    CLUSTER_NAME='aks-trading-app-prod'
+    ACR_LOGIN='acrsamaneh.azurecr.io'
+  }
+  stages {
+    stage('Init') {
+      steps {
+        container('azcli') {
+          sh 'az version'
+          sh 'az login --service-principal --username $AZ_USER --password $AZ_PWD --tenant $AZ_TENANT'
+        }
+      }
+    }
+    stage('Build & Push') {
+      steps {
+        container('azcli') {
+          sh "az acr build --image ${IMAGE_NAME} --registry ${ACR_NAME} --file springboot/Dockerfile springboot"
+        }
+      }
+    }
+    stage('Deploy') {
+      steps {
+        container('azcli') {
+          sh '''
+            mkdir -p /home/jenkins/.kube
+            az aks get-credentials \
+              --resource-group ${RESOURCE_GROUP} \
+              --name ${CLUSTER_NAME} \
+              --file /home/jenkins/.kube/config
+          '''
+        }
+        container('kubectl') {
+          sh '''
+            export KUBECONFIG=/home/jenkins/.kube/config
+            kubectl config view
+            kubectl set image deployment/trading-app \
+              trading-app=${ACR_LOGIN}/${IMAGE_NAME}
+            kubectl rollout status deployment/trading-app
+            kubectl get all
+          '''
+        }
+      }
+    }
+  }
+}
